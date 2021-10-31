@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity2"
+    tools:context=".activity.MainActivity2"
     android:background="@color/lightPurple">
 
     <EditText
@@ -29,6 +29,7 @@
         android:id="@+id/svBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="Save" />
 
     <Button

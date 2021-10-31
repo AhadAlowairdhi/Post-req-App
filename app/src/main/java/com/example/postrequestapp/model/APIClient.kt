@@ -1,4 +1,4 @@
-package com.example.postrequestapp
+package com.example.postrequestapp.model
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
