@@ -15,7 +15,7 @@ interface APIInterface {
 
     @Headers("Content-Type: application/json")
     @PUT("/test/{pk}")
-    fun updateInfo(@Path("pk") pk: Int, @Body updateUbring: UserList): Call<List<UserList>>
+    fun updateInfo(@Path("pk") pk: Int, @Body updateUbring: UserList): Call<UserList>
 
     @Headers("Content-Type: application/json")
     @DELETE ("/test/{pk}")
