@@ -36,15 +36,15 @@ class MainActivity3 : AppCompatActivity() {
         delBtn= findViewById(R.id.delBtn)
         turnBtn=findViewById(R.id.turnBtn)
 
-        updtBtn.setOnClickListener {
+       updtBtn.setOnClickListener {
             val userID = edtID.text.toString().toInt()
            apiInterface?.updateInfo(userID!!, UserList(userID,edNamUpdt.text.toString(),edLocUpdt.text.toString())
-           )?.enqueue(object : Callback<List<UserList>>{
-               override fun onResponse(call: Call<List<UserList>>, response: Response<List<UserList>>) {
+           )?.enqueue(object : Callback<UserList>{
+               override fun onResponse(call: Call<UserList>, response: Response<UserList>) {
                    Toast.makeText(this@MainActivity3, "User Updated", Toast.LENGTH_SHORT).show()
                }
 
-               override fun onFailure(call: Call<List<UserList>>, t: Throwable) {
+               override fun onFailure(call: Call<UserList>, t: Throwable) {
                    Toast.makeText(this@MainActivity3, "User not updated!", Toast.LENGTH_SHORT).show()
                }
 
